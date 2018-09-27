@@ -27,7 +27,7 @@ how would you refactor the code?]
 ==== End template ====
 
 # List of code smells
-## Code Smell: [For Testing 2]
+## Code Smell: [For Testing 3]
 
 ### Code Smell Category: [Write the code smell category name]
 
