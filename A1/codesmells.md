@@ -46,3 +46,19 @@ making the while loop too long.]
 There will be two subclass which is working for "Picker" and "Sequencer".
 We can override each method in new class('Order') for "Picker" and "Sequencer"
 in order to achieve the function of if statement.]
+
+## Code Smell: [Dead Code]
+
+### Code Smell Category: [Dispensable]
+
+### List of classes and line numbers involved:
+
+* [OrderException]
+
+### Description:
+
+[OrderException is never used in any other class in this project]
+
+### Solution:
+
+[We just need to delete this class.]
