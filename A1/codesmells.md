@@ -62,3 +62,20 @@ in order to achieve the function of if statement.]
 ### Solution:
 
 [We just need to delete this class.]
+
+## Code Smell: [Dead Code]
+
+### Code Smell Category: [Dispensable]
+
+### List of classes and line numbers involved:
+
+* [OrderListManager, line25 and 30]
+
+### Description:
+
+[List<PickerOrderList> called completedOrders is no longer used.
+Set<Picker> called pickers is no longer used.]
+
+### Solution:
+
+[We should delete those two instance variables.]
