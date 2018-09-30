@@ -27,19 +27,22 @@ how would you refactor the code?]
 ==== End template ====
 
 # List of code smells
-## Code Smell: [For Testing 3]
+## Code Smell: [Switch Statement]
 
-### Code Smell Category: [Write the code smell category name]
+### Code Smell Category: [Object-Orientation Abusers]
 
 ### List of classes and line numbers involved:
 
-* [Write a class and list of line numbers, one class per asterisk, that describe the smell]
+* [WarehouseSimulation, line 53-80]
 
 ### Description:
 
-[In your own words, explain how this particular code smells.]
+[there are three items in both nextEvent.startsWith and nextEvent.endsWith, Each situation is using one if statement,
+making the while loop too long.]
 
 ### Solution:
 
-[In your own words, explain how you might solve this code smell:
-how would you refactor the code?]
+[We could write a new class working for the event which starts with 'Order'.
+There will be two subclass which is working for "Picker" and "Sequencer".
+We can override each method in new class('Order') for "Picker" and "Sequencer"
+in order to achieve the function of if statement.]
