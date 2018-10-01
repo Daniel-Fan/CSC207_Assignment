@@ -154,3 +154,20 @@ Then we could override some specific methods for Picker and Sequencer.]
 
 [From the first code smell(Switch Statement), we can decrease the line of code by rewriting the if statement by inheritance
 to lead to a cleaner and shorter code]
+
+
+## Code Smell: [Speculative Generality]
+
+### Code Smell Category: [Dispensable]
+
+### List of classes and line numbers involved:
+
+* [Worker]
+
+### Description:
+
+[the class called worker is empty, it should be used to handle a future situation.]
+
+### Solution:
+
+[We can delete the class called worker.]
