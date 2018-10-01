@@ -121,3 +121,19 @@ One is picker and the other is sequencer.]
 
 [We can write a class Worker which is super class for Picker and Sequencer.
 Then we could override some specific methods for Picker and Sequencer.]
+
+## Code Smell: [Comments]
+
+### Code Smell Category: [Dispensable]
+
+### List of classes and line numbers involved:
+
+* [TranslationTable, line25-33]
+
+### Description:
+
+[Too many comments for each line of code.]
+
+### Solution:
+
+[We could delete the comments in line25, 27, 30, 32.]
