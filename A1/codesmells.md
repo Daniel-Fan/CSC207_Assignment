@@ -83,3 +83,41 @@ if statement in method void pick(String name, String sku). if statement will alw
 
 [We could delete method boolean pickExpected(String name, String sku) and we don't need if statement
 in method void pick(String name, String sku)]
+
+## Code Smell: [Alternative Classes with Different Interfaces]
+
+### Code Smell Category: [Object-Orientation Abusers]
+
+### List of classes and line numbers involved:
+
+* [PickerOrderList]
+* [SequencerOrderList]
+
+### Description:
+
+[Two classes have the similar functionality but with different method names.And they have different variable names.
+One is picker something and the other is sequencer something]
+
+### Solution:
+
+[We can write a class WorkerOrderList which is super class for PickerOrderList and SequencerOrderList.
+Then we could override some specific methods for Picker and Sequencer.]
+
+## Code Smell: [Alternative Classes with Different Interfaces]
+
+### Code Smell Category: [Object-Orientation Abusers]
+
+### List of classes and line numbers involved:
+
+* [Picker]
+* [Sequencer]
+
+### Description:
+
+[Two classes have the similar functionality but with different method names.And they have different variable names.
+One is picker and the other is sequencer.]
+
+### Solution:
+
+[We can write a class Worker which is super class for Picker and Sequencer.
+Then we could override some specific methods for Picker and Sequencer.]
