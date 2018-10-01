@@ -137,3 +137,20 @@ Then we could override some specific methods for Picker and Sequencer.]
 ### Solution:
 
 [We could delete the comments in line25, 27, 30, 32.]
+
+## Code Smell: [Large Method]
+
+### Code Smell Category: [Bloaters]
+
+### List of classes and line numbers involved:
+
+* [WarehouseSimulation, line41-96]
+
+### Description:
+
+[The method called void start has too long lines of actual code.]
+
+### Solution:
+
+[From the first code smell(Switch Statement), we can decrease the line of code by rewriting the if statement by inheritance
+to lead to a cleaner and shorter code]
