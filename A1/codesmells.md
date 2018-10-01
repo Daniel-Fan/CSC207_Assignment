@@ -54,14 +54,17 @@ in order to achieve the function of if statement.]
 ### List of classes and line numbers involved:
 
 * [OrderException]
+* [OrderListManager, line25 and 30]
 
 ### Description:
 
-[OrderException is never used in any other class in this project]
+[OrderException is never used in any other class in this project
+List<PickerOrderList> called completedOrders is no longer used.
+Set<Picker> called pickers is no longer used.]
 
 ### Solution:
 
-[We just need to delete this class.]
+[We just need to delete the class and those instance variables.]
 
 ## Code Smell: [Dead Code]
 
@@ -69,13 +72,14 @@ in order to achieve the function of if statement.]
 
 ### List of classes and line numbers involved:
 
-* [OrderListManager, line25 and 30]
+* [OrderListManager, line47, 48, 60]
 
 ### Description:
 
-[List<PickerOrderList> called completedOrders is no longer used.
-Set<Picker> called pickers is no longer used.]
+[the method boolean pickExpected(String name, String sku) will always return False and the return value is used for
+if statement in method void pick(String name, String sku). if statement will always be true.]
 
 ### Solution:
 
-[We should delete those two instance variables.]
+[We could delete method boolean pickExpected(String name, String sku) and we don't need if statement
+in method void pick(String name, String sku)]
