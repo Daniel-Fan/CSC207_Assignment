@@ -1,5 +1,7 @@
 package fall2018.csc2017.slidingtiles;
 
+import android.support.annotation.NonNull;
+
 import java.util.Observable;
 
 import java.io.Serializable;
@@ -9,9 +11,8 @@ import java.util.List;
 
 /**
  * The sliding tiles board.
- * TODO: Make this implement Iterable<Tile>.
  */
-public class Board extends Observable implements Serializable {
+public class Board extends Observable implements Iterable<Tile>, Serializable {
 
     /**
      * The number of rows.
@@ -44,13 +45,36 @@ public class Board extends Observable implements Serializable {
         }
     }
 
+    @Override
+    @NonNull
+    public Iterator<Tile> iterator() {
+        return new Iterator<Tile>() {
+
+            private int index = 0;
+            private Tile tile;
+
+            @Override
+            public boolean hasNext() {
+                return index < numTiles() &&
+                        getTile(index / Board.NUM_COLS, index % Board.NUM_COLS) != null;
+            }
+
+            @Override
+            public Tile next() {
+                tile = getTile(index / Board.NUM_COLS, index % Board.NUM_COLS);
+                index++;
+                return tile;
+            }
+        };
+    }
+
     /**
      * Return the number of tiles on the board.
+     *
      * @return the number of tiles on the board
      */
     int numTiles() {
-        // TODO: fix me
-        return -1;
+        return NUM_COLS * NUM_ROWS;
     }
 
     /**
@@ -73,8 +97,10 @@ public class Board extends Observable implements Serializable {
      * @param col2 the second tile col
      */
     void swapTiles(int row1, int col1, int row2, int col2) {
-        // TODO: swap
-
+        Tile temp_tiles;
+        temp_tiles = tiles[row1][col1];
+        tiles[row1][col1] = tiles[row2][col2];
+        tiles[row2][col2] = temp_tiles;
         setChanged();
         notifyObservers();
     }
