@@ -49,7 +49,9 @@ public class Board extends Observable implements Iterable<Tile>, Serializable {
     @NonNull
     public Iterator<Tile> iterator() {
         return new Iterator<Tile>() {
-
+            /**
+             * index in List</Tile>
+             */
             private int index = 0;
             private Tile tile;
 
