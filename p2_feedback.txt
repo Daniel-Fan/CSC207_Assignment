@@ -1,0 +1,55 @@
+Dear Yuchen,
+
+This is the feedback for Phase 2. You were in group group_0674, and here are
+the UTORids of your team members:
+
+	fanyuch1, tongyuch, zhan4662, zhan4783
+
+When you are working on a team, in a professional setting, good design is related to being a good team member. 
+
+1. Is it easy for other team members to read and understand your code? (Consider your Javadoc and comments, and line-by-line style.) 
+
+2. Is it easy for other people to extend your code and add new features? (Consider the Open/Closed Principle and Test Driven Design.)
+
+3. Is it easy for other team members to write code that interacts with yours? (Consider encapsulation, naming conventions, the use of interfaces, etc.)
+
+The list continues, and includes almost every topic from CSC207.
+
+Your project makes good use of the Factory, Observer, Iterator design patterns, and TreeMap data structure to help achieve the functionality of scoreboard. The feature of having a Game list with the ability to add and remove was great!
+
+A good next step would be to create more test cases to make sure regression testing can be done for future project development, and some variables should be declared as high level as possible(eg. List<> l = ArrayList<>).
+
+Package names in Java use pothole_case, and so you should address that.
+
+Class Board's instance variables should be private, not package private.
+
+Your Javadoc was generally complete, although you could add it in the places where it is missing.
+
+Some methods, such as LoadOrSaveGameActivity.addSlotButton, were quite long, and you should refactor to eliminate this.
+
+Some comments merely repeated what the code is doing. Most of the comments in ScoreBoard.addNewScore fall in this category. When writing internal comments, you should never merely restate what is obvious from the code.
+
+
+As you continue to practice object-oriented programming, you will see that your past experience informs your decisions. It will be easier to make good design decisions before you code, rather than refactoring at every step. 
+
+We hope that you enjoyed this course and that your experience with the project has been useful to you.
+
+Here is your grade breakdown for the project. The "Design" mark is the letter
+grade for your Phase 2 software design converted to a numeric mark, using the
+upper end of the appropriate grade range. Here are a few examples: A has a
+range of 85-89, so we would use 89%, resulting in a grade of 10.68/12; another
+example is B-, which has a range of 70-72, so we would use 72%, or 8.64/12.
+You can find the full scale here:
+
+    http://www.artsci.utoronto.ca/newstudents/transition/academic/grading
+
+If the Phase 2 "Total" percentage was higher than your Phase 1 mark, we
+replaced your Phase 1 mark with your Phase 2 mark when calculating your
+overall course grade.
+
+   utor: fanyuch1
+   sec: 0101
+   testing: 0 / 2
+   presentation: 3 / 3
+   design: 9.48 / 12
+   p2_total: 12.48 / 17
